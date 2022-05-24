@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.css';
+
 import round1 from '../Assets/round1.jpg'
 import round2 from '../Assets/round2.jpg'
 import round3 from '../Assets/round3.jpg'
@@ -12,6 +13,12 @@ import kidz3 from '../Assets/kidz3.jpg'
 import crousel1 from '../Assets/crousel1.jpg'
 import crousel2 from '../Assets/crousel2.jpg'
 import crousel3 from '../Assets/crousel3.jpg'
+import cartoon1 from '../Assets/cartoon1.jpg'
+import cartoon2 from '../Assets/cartoon2.jpg'
+import cartoon3 from '../Assets/cartoon3.jpg'
+import cartoon4 from '../Assets/cartoon4.png'
+import cartoon5 from '../Assets/cartoon5.png'
+import cartoon6 from '../Assets/cartoon6.jpg'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -296,7 +303,68 @@ function Home() {
 </div>
     </div>
 
+  </div><br/>
+
+  <center> <h1 style={{color:'white'}}>Kidzapproved Collections</h1></center>
+
+  <div className='row'>
+    <div className='col-lg-2 '>
+    <div className='col-lg-2'>
+    <div class="card" style={{width: '12rem'} }>
+  <img src={cartoon1} className="card-img-top " alt="..."/>
+  <div class="card-body">
+    <p class="card-text">How to Spend Your Cashback-Top Picks </p>
   </div>
+</div>
+    </div>
+    </div>
+
+    <div className='col-lg-2'>
+    <div class="card" style={{width: '12rem'}}>
+  <img src={cartoon2} class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <p class="card-text">Fun For AED 50 or Less </p>
+  </div>
+</div>
+    </div>
+
+    <div className='col-lg-2'>
+    <div class="card" style={{width: '12rem'}}>
+  <img src={cartoon3} class="card-img-top" alt="..."/><br/>
+  <div class="card-body">
+    <p class="card-text">Pay Attraction Deals </p>
+  </div>
+</div>
+    </div>
+
+    <div className='col-lg-2'>
+    <div class="card" style={{width: '12rem'}}>
+  <img src={cartoon4} class="card-img-top" alt="..."/>
+  <div class="card-body">
+    <p class="card-text">Weekday deals Not to Miss </p>
+  </div>
+</div>
+    </div>
+
+    <div className='col-lg-2'>
+    <div class="card" style={{width: '12rem'}}>
+  <img src={cartoon5} class="card-img-top" alt="..."/><br/>
+  <div class="card-body">
+    <p class="card-text">Super Club offers </p>
+  </div>
+</div>
+    </div>
+
+    <div className='col-lg-2'>
+    <div class="card" style={{width: '12rem'}}>
+  <img src={cartoon6} class="card-img-top" alt="..."/><br/>
+  <div class="card-body">
+    <p class="card-text">Birthday Deals  </p>
+  </div>
+</div>
+    </div>
+
+  </div><br/>
 
   </div>
 </section>
