@@ -1,0 +1,104 @@
+#kidz-logo{
+    width: 174px !important;
+    height: auto;
+}
+.kidz-link1{
+    margin-top: 20px;
+    margin-left: 38%;
+
+}
+.nav-item{
+    margin:0px 5px 0px 2px ;
+}
+/* form {
+    background-color: #4654e1;
+    width: 300px;
+    height: 44px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  } */
+  .nav-row-link{
+    position: absolute;
+    margin-left: inherit;
+    margin-top: -2%;
+  }
+  .kidz-link2{
+    margin-top: 20px;
+    margin-left: 38%;
+
+}
+.nav-row-link2{
+    position: absolute;
+    margin-left: inherit;
+    padding-top: 20px;
+    margin-top: -2%;
+  }
+  .navbar-css{
+      /* background-color: azure !important; */
+      padding: 20px 0px 20px 0px;
+      box-shadow: 1px 1px lightgray;
+  }
+  .download-btn{
+    
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        padding: 8px 15px;
+        cursor: pointer;
+        font-size: 15px;
+      }
+      
+      /* Darker background on mouse-over */
+      .Download-btn:hover {
+        background-color: RoyalBlue;
+      }
+      .AccountCircle1 svg{
+        font-size: 45px;
+      }
+      .nav-item .AccountCircle1{
+        padding: 0px;
+      }
+      .toggler-position{
+          position: absolute;
+          top: 25px;
+          right: 10px;
+      }
+      @media  (max-width: 1267px) {
+        .nav-row-link{
+            /* position: absolute; */
+            margin-left: 29%;
+            margin-top: -2%;
+          }
+          .nav-row-link2{
+            /* position: absolute; */
+            margin-left: 29%;
+            padding-top: 20px;
+            margin-top: -2%;
+          }
+
+      }
+      @media (max-width: 1107px) {
+        .nav-row-link{
+            position: absolute; 
+            margin-left: 20%;
+            margin-top: -2%;
+          }
+          .nav-row-link2{
+            /*  position: absolute;  */
+            margin-left: 20%;
+            padding-top: 20px;
+            margin-top: -2%; 
+          }
+
+      }
+      .btn :focus{
+        outline: 0 !important;
+        box-shadow: none !important;
+        
+      }
+      .mui-btn{
+        border-radius: 20px !important;
+      }
+      

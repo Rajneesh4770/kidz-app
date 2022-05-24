@@ -1,0 +1,23 @@
+.footer{
+    background-color: #002240 ;
+    /* background-color:lightgray; */
+    color:white;
+padding-top: 10px;
+padding-bottom: 10px;
+
+}
+.footer li{
+    list-style: none;
+}
+ .img1{
+    width: 150px;
+}
+.img2{
+    width: 250px;
+    margin: -54px 0px 0px -50px;
+
+}
+.nav-link{
+    display: contents;
+    color: white;
+}
