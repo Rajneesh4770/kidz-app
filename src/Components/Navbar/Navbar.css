@@ -93,6 +93,31 @@
           }
 
       }
+     
+      @media(max-width:991px){
+        .nav-row-link2{
+          margin-top: 165px;
+          /* margin-left: 50%; */
+        }
+        
+        .nav-row-link li{
+          margin-bottom: 3px;
+        }
+        .nav-row-link2 li{
+          margin-bottom: 3px;
+        }
+      }
+      /* @media(min-width:1260px){
+        .nav-row-link2{
+          margin-left: 65%;
+          margin-top: -20px;
+          font-size: larg;
+        }
+        .nav-row-link{
+          margin-left: 60%;
+          margin-top: -34px;
+        }
+      } */
       .btn :focus{
         outline: 0 !important;
         box-shadow: none !important;

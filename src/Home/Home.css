@@ -1,3 +1,6 @@
+body{
+  margin-top: 100px;
+}
 .crousel-css{
     /* height: 400px; */
     overflow: hidden;
@@ -39,7 +42,7 @@
     padding-bottom: 15px;
 }
 .cr-img img{
-  height: 590px;
+  height: 510px !important;
 }
 .section-3 img{
   border-radius: 50px;
@@ -48,4 +51,34 @@
 }
 .section-3.card{
   background-color: #00AFF4;
+}
+.section-4{
+  background-color: #002240;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.section-5{
+  padding-bottom: 20px;
+}
+
+.card-4{
+  border-radius: 12px;
+ 
+}
+
+
+.section-6{
+  margin: 15px 0px 15px 0px;
+}
+.hr-1{
+  transform: rotate(90deg);
+  width: 67px;
+  margin-left: 236px;
+  margin-top: -35px;
+}
+.hr-2{
+  transform: rotate(90deg);
+  width: 67px;
+  margin-left: 450px;
+  margin-top: -33px;
 }

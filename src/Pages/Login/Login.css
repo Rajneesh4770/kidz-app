@@ -1,3 +1,19 @@
 body{
     margin-top: 100px;
 }
+.background{
+    background-color: black;
+    /* border-radius: 0.5%; */
+    padding: 50px 0px;
+}
+form{
+    display: inline-grid;
+    color: white;
+    margin-left: 35%;
+}
+.image123{
+    height: 50%;
+}
+.btn-success{
+    width: -webkit-fill-available;
+}
