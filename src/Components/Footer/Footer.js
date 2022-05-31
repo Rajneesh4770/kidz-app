@@ -1,8 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './Footer.css'
-import googleplay from '../../Assets/googleplay.png'
-import apppng from '../../Assets/apppng.png'
 import livechat from '../../Assets/livechat.png'
 function Footer() {
   return (
@@ -87,8 +85,8 @@ function Footer() {
                 <div>
                 <ul>
                 <h6>Available on</h6>
-                    <a href='https://play.google.com/store?utm_source=apac_med&utm_medium=hasem&utm_content=Oct0121&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-in-1003227-med-hasem-py-Evergreen-Oct0121-Text_Search_BKWS-BKWS%7cONSEM_kwid_43700065205026379_creativeid_535350509666_device_c&gclid=CjwKCAjw4ayUBhA4EiwATWyBrn_XwajBYRLt9ZBWyzwlF7MhH_mK3lJxNuWXugDLVJ-zg3rb4WFjVRoC1rsQAvD_BwE&gclsrc=aw.ds'><li><img src={googleplay} alt="" className='img1'/></li></a>
-                    <a href='https://www.apple.com/in/store'><li><img src={apppng} alt="" className='img2'/></li></a>
+                    <a href='https://play.google.com/store?utm_source=apac_med&utm_medium=hasem&utm_content=Oct0121&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-in-1003227-med-hasem-py-Evergreen-Oct0121-Text_Search_BKWS-BKWS%7cONSEM_kwid_43700065205026379_creativeid_535350509666_device_c&gclid=CjwKCAjw4ayUBhA4EiwATWyBrn_XwajBYRLt9ZBWyzwlF7MhH_mK3lJxNuWXugDLVJ-zg3rb4WFjVRoC1rsQAvD_BwE&gclsrc=aw.ds'><li><img src='https://tc-main.cdn.prismic.io/tc-main/b93a7d57-41bb-4f76-9c67-933e6630f5a9_Play-Store-Button.svg' alt="" className='img1'/></li></a><br/>
+                    <a href='https://www.apple.com/in/store'><li><img src='https://tc-main.cdn.prismic.io/tc-main/764f30d7-d457-480d-8f03-ba1479430949_App-Store-Button.svg' alt="" className='img2'/></li></a>
                  
                     
                 </ul></div>

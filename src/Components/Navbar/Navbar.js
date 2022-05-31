@@ -21,7 +21,9 @@ function Navbar() {
                               {/* Logo */}
 
       <div className='col-lg-6 col-md-8' col-sm-10 >
+        <NavLink to ='/Home'>
     <img src={kidzlogo} className="navbar-brand " id='kidz-logo' />
+    </NavLink>
     </div>
 <div className='col-lg-6 col-sm-2 col-md-4 ml-auto'>
     <button className="navbar-toggler toggler-position" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

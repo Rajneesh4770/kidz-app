@@ -82,3 +82,26 @@ body{
   margin-left: 450px;
   margin-top: -33px;
 }
+.card-hover-1:hover{
+  height: 102%;
+  max-width: 370px;
+}
+.map-images{
+  margin: auto;
+}
+.media-5:hover{
+background-color: aqua;
+}
+.card-4 img:hover{
+width: 105%;
+}
+.card-img-top:hover{
+  height: 160px;
+  box-shadow: 5% black;
+}
+@media(min-width:1199px){
+  .special{
+    padding-left: 85px;
+  }
+
+}

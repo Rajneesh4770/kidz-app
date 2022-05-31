@@ -34,6 +34,12 @@
     margin-left: inherit;
     padding-top: 20px;
     margin-top: -2%;
+    
+  }
+  .nav-row-link2 a{
+    text-decoration: none !important;
+    /* word-spacing: 14px; */
+    padding-right: 8px;
   }
   .navbar-css{
       /* background-color: azure !important; */
@@ -126,4 +132,14 @@
       .mui-btn{
         border-radius: 20px !important;
       }
+      @media(min-width:1107px) and (max-width:1176px){
+        .nav-row-link{
+          margin-left: 260px;
+        }
+      }
+      /* @media(min-width:991px)and (max-width:1046px){
+        .nav-row-link{
+          margin-left: 190px;
+        }
+      } */
       

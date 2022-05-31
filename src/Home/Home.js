@@ -30,12 +30,37 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { CardActionArea, Rating, Box, TextField } from "@mui/material";
+import { CardActionArea, Rating } from "@mui/material";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Kidzappfeed from '../Components/Kidzapp-feed/Kidzapp-feed'
+
+
 
 function Home() {
+  const renderSlides = () =>
+    ['https://drfsb8fjssbd3.cloudfront.net/images/dubai-eye.png',
+    'https://drfsb8fjssbd3.cloudfront.net/images/lovin-dubai.png',
+    "https://drfsb8fjssbd3.cloudfront.net/images/dubai-tv.png",
+    'https://drfsb8fjssbd3.cloudfront.net/images/the-national.png',
+    'https://drfsb8fjssbd3.cloudfront.net/images/dubai-eye.png',
+    'https://drfsb8fjssbd3.cloudfront.net/images/lovin-dubai.png',
+    'https://drfsb8fjssbd3.cloudfront.net/images/dubai-eye.png',
+    "https://drfsb8fjssbd3.cloudfront.net/images/dubai-tv.png"
+
+      ].map(num => (
+      <div>
+        <img className='map-images' src={num} alt=""/>
+        
+      </div>
+    ));
   return (
     <>
       <div className="container-flex">
+
+          {/* section-1 */}
+
         <section className="crousel">
           <div className="crousel-css">
             <div
@@ -127,6 +152,8 @@ function Home() {
           </div>
         </section>
 
+            {/* section-2 */}
+
         <section className="section-2">
           <div class="container">
             <div className="row">
@@ -151,7 +178,7 @@ function Home() {
 
             <div className="row">
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <Card sx={{ maxWidth: 345 }}>
+                <Card className='card-hover-1' sx={{ maxWidth: 345 }}>
                   <CardMedia
                     component="img"
                     height="200"
@@ -168,7 +195,7 @@ function Home() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" variant="outlined" color="error">
+                    <Button size="small" variant="contained" color="error">
                       Book Now
                     </Button>
                   </CardActions>
@@ -176,7 +203,7 @@ function Home() {
               </div>
 
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <Card sx={{ maxWidth: 345 }}>
+                <Card className='card-hover-1' sx={{ maxWidth: 345 }}>
                   <CardMedia
                     component="img"
                     height="200"
@@ -193,7 +220,7 @@ function Home() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" variant="outlined" color="error">
+                    <Button size="small" variant="contained" color="error">
                       Book Now
                     </Button>
                   </CardActions>
@@ -201,7 +228,7 @@ function Home() {
               </div>
 
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <Card sx={{ maxWidth: 345 }}>
+                <Card className='card-hover-1' sx={{ maxWidth: 345 }}>
                   <CardMedia
                     component="img"
                     height="200"
@@ -218,7 +245,7 @@ function Home() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" variant="outlined" color="error">
+                    <Button size="small" variant="contained" color="error">
                       Book Now
                     </Button>
                   </CardActions>
@@ -230,7 +257,7 @@ function Home() {
             {/* 2nd row of card */}
             <div className="row">
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <Card sx={{ maxWidth: 345 }}>
+                <Card className='card-hover-1' sx={{ maxWidth: 345 }}>
                   <CardMedia
                     component="img"
                     height="200"
@@ -247,7 +274,7 @@ function Home() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" variant="outlined" color="error">
+                    <Button size="small" variant="contained" color="error">
                       Book Now
                     </Button>
                   </CardActions>
@@ -255,7 +282,7 @@ function Home() {
               </div>
 
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <Card sx={{ maxWidth: 345 }}>
+                <Card className='card-hover-1' sx={{ maxWidth: 345 }}>
                   <CardMedia
                     component="img"
                     height="200"
@@ -272,7 +299,7 @@ function Home() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" variant="outlined" color="error">
+                    <Button size="small" variant="contained" color="error">
                       Book Now
                     </Button>
                   </CardActions>
@@ -280,7 +307,7 @@ function Home() {
               </div>
 
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <Card sx={{ maxWidth: 345 }}>
+                <Card className='card-hover-1' sx={{ maxWidth: 345 }}>
                   <CardMedia
                     component="img"
                     height="200"
@@ -297,7 +324,7 @@ function Home() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" variant="outlined" color="error">
+                    <Button size="small" variant="contained" color="error">
                       Book Now
                     </Button>
                   </CardActions>
@@ -307,9 +334,11 @@ function Home() {
           </div>
         </section>
         <br />
+
+
         {/* section-3 */}
         <section className="section-3">
-          <div className="container-fluid">
+          <div className="container">
             <center>
               {" "}
               <h1 style={{ color: "white" }}>Kidzappolis</h1>
@@ -317,7 +346,7 @@ function Home() {
             <div className="row">
               <div className="col-lg-2 ">
                 <div className="col-lg-2">
-                  <div class="card" style={{ width: "12rem" }}>
+                  <div class="card" style={{ width: "10rem" }}>
                     <img src={round1} className="card-img-top " alt="..." />
                     <div class="card-body">
                       <p class="card-text">Animal Fun </p>
@@ -327,7 +356,7 @@ function Home() {
               </div>
 
               <div className="col-lg-2">
-                <div class="card" style={{ width: "12rem" }}>
+                <div class="card" style={{ width: "10rem" }}>
                   <img src={round2} class="card-img-top" alt="..." />
                   <div class="card-body">
                     <p class="card-text">Children </p>
@@ -336,16 +365,16 @@ function Home() {
               </div>
 
               <div className="col-lg-2">
-                <div class="card" style={{ width: "12rem" }}>
+                <div class="card" style={{ width: "10rem" }}>
                   <img src={round3} class="card-img-top" alt="..." />
                   <div class="card-body">
-                    <p class="card-text">Art, music & dance </p>
+                    <p class="card-text">Art & music  </p>
                   </div>
                 </div>
               </div>
 
               <div className="col-lg-2">
-                <div class="card" style={{ width: "12rem" }}>
+                <div class="card" style={{ width: "10rem" }}>
                   <img src={round4} class="card-img-top" alt="..." />
                   <div class="card-body">
                     <p class="card-text">Baby & Toddler </p>
@@ -354,7 +383,7 @@ function Home() {
               </div>
 
               <div className="col-lg-2">
-                <div class="card" style={{ width: "12rem" }}>
+                <div class="card" style={{ width: "10rem" }}>
                   <img src={round5} class="card-img-top" alt="..." />
                   <div class="card-body">
                     <p class="card-text">Birthday </p>
@@ -363,16 +392,19 @@ function Home() {
               </div>
 
               <div className="col-lg-2">
-                <div class="card" style={{ width: "12rem" }}>
+                <div class="card" style={{ width: "10rem" }}>
                   <img src={round6} class="card-img-top" alt="..." />
                   <div class="card-body">
-                    <p class="card-text">Course & Workshop </p>
+                    <p class="card-text">Courses </p>
                   </div>
                 </div>
               </div>
             </div>
             <br />
 
+           
+
+           
             <center>
               {" "}
               <h1 style={{ color: "white" }}>Kidzapproved Collections</h1>
@@ -381,11 +413,11 @@ function Home() {
             <div className="row">
               <div className="col-lg-2 ">
                 <div className="col-lg-2">
-                  <div class="card" style={{ width: "12rem" }}>
+                  <div class="card" style={{ width: "10rem" }}>
                     <img src={cartoon1} className="card-img-top " alt="..." />
                     <div class="card-body">
                       <p class="card-text">
-                        How to Spend Your Cashback-Top Picks{" "}
+                         Cashback-Top Picks{" "}
                       </p>
                     </div>
                   </div>
@@ -393,7 +425,7 @@ function Home() {
               </div>
 
               <div className="col-lg-2">
-                <div class="card" style={{ width: "12rem" }}>
+                <div class="card" style={{ width: "10rem" }}>
                   <img src={cartoon2} class="card-img-top" alt="..." />
                   <div class="card-body">
                     <p class="card-text">Fun For AED 50 or Less </p>
@@ -402,9 +434,9 @@ function Home() {
               </div>
 
               <div className="col-lg-2">
-                <div class="card" style={{ width: "12rem" }}>
+                <div class="card" style={{ width: "10rem" }}>
                   <img src={cartoon3} class="card-img-top" alt="..." />
-                  <br />
+                  
                   <div class="card-body">
                     <p class="card-text">Pay Attraction Deals </p>
                   </div>
@@ -412,7 +444,7 @@ function Home() {
               </div>
 
               <div className="col-lg-2">
-                <div class="card" style={{ width: "12rem" }}>
+                <div class="card" style={{ width: "10rem" }}>
                   <img src={cartoon4} class="card-img-top" alt="..." />
                   <div class="card-body">
                     <p class="card-text">Weekday deals Not to Miss </p>
@@ -421,7 +453,7 @@ function Home() {
               </div>
 
               <div className="col-lg-2">
-                <div class="card" style={{ width: "12rem" }}>
+                <div class="card" style={{ width: "10rem" }}>
                   <img src={cartoon5} class="card-img-top" alt="..." />
                   <br />
                   <div class="card-body">
@@ -431,7 +463,7 @@ function Home() {
               </div>
 
               <div className="col-lg-2">
-                <div class="card" style={{ width: "12rem" }}>
+                <div class="card" style={{ width: "10rem" }}>
                   <img src={cartoon6} class="card-img-top" alt="..." />
                   <br />
                   <div class="card-body">
@@ -448,10 +480,10 @@ function Home() {
 
         <section className="section-4">
           <center>
-            {" "}
+            
             <h1 style={{ color: "white" }}>Our Blog Pics</h1>
-          </center>
           <br />
+          </center>
           <div className="container">
             <div className="row">
               <div className="col-lg-8 col-md-12 col-sm-12">
@@ -482,7 +514,7 @@ function Home() {
                 </Card>
               </div>
               <div className="col-lg-4 col-sm-12 col-md-12">
-                <Card sx={{ maxWidth: 345 }}>
+                <Card className="card-4" sx={{ maxWidth: 345 }}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
@@ -512,7 +544,7 @@ function Home() {
 
             <div className="row">
               <div className="col-lg-4 col-md-12 col-sm-12">
-                <Card sx={{ maxWidth: 345 }}>
+                <Card className="card-4" sx={{ maxWidth: 345 }}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
@@ -539,7 +571,7 @@ function Home() {
               </div>
 
               <div className="col-lg-4 col-md-12 col-sm-12">
-                <Card sx={{ maxWidth: 345 }}>
+                <Card className="card-4" sx={{ maxWidth: 345 }}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
@@ -566,7 +598,7 @@ function Home() {
               </div>
 
               <div className="col-lg-4 md-12 sm-12">
-                <Card sx={{ maxWidth: 345 }}>
+                <Card className="card-4" sx={{ maxWidth: 345 }}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
@@ -596,7 +628,7 @@ function Home() {
 
             <div className="row">
               <div className="col-lg-4">
-                <Card sx={{ maxWidth: 345 }}>
+                <Card className="card-4" sx={{ maxWidth: 345 }}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
@@ -622,7 +654,7 @@ function Home() {
                 </Card>
               </div>
               <div className="col-lg-8 special ">
-                <Card sx={{ maxWidth: 650 }}>
+                <Card className="card-4" sx={{ maxWidth: 650 }}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
@@ -653,7 +685,7 @@ function Home() {
 
             <div className="row">
               <div className="col-lg-4 col-md-12 col-sm-12">
-                <Card sx={{ maxWidth: 345 }}>
+                <Card className="card-4" sx={{ maxWidth: 345 }}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
@@ -680,7 +712,7 @@ function Home() {
               </div>
 
               <div className="col-lg-4 col-md-12 col-sm-12">
-                <Card sx={{ maxWidth: 345 }}>
+                <Card className="card-4" sx={{ maxWidth: 345 }}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
@@ -707,7 +739,7 @@ function Home() {
               </div>
 
               <div className="col-lg-4 md-12 sm-12">
-                <Card sx={{ maxWidth: 345 }}>
+                <Card className="card-4" sx={{ maxWidth: 345 }}>
                   <CardActionArea>
                     <CardMedia
                       component="img"
@@ -750,7 +782,7 @@ function Home() {
             <br />
             <div className="row">
               <div className="col-lg-4">
-                <Card sx={{ minWidth: 275 }}>
+                <Card className='media-5' sx={{ minWidth: 275 }}>
                   <CardContent>
                     <Typography
                       sx={{ fontSize: 14 }}
@@ -778,7 +810,7 @@ function Home() {
                 </Card>
               </div>
               <div className="col-lg-4">
-                <Card sx={{ minWidth: 275 }}>
+                <Card className='media-5' sx={{ minWidth: 275 }}>
                   <CardContent>
                     <Typography
                       sx={{ fontSize: 14 }}
@@ -807,7 +839,7 @@ function Home() {
               </div>
 
               <div className="col-lg-4">
-                <Card sx={{ minWidth: 275 }}>
+                <Card className='media-5' sx={{ minWidth: 275 }}>
                   <CardContent>
                     <Typography
                       sx={{ fontSize: 14 }}
@@ -839,66 +871,32 @@ function Home() {
         </section>
         {/* section-5 closed */}
 
+        {/* section-6 */}
+
         <section className="section-6">
           <div className="container">
             <center>
               <h1 style={{ color: "darkblue" }}>As Featured in </h1>
             </center>
             <br />
-            <div className="row">
-              <div className="col-lg-12">
-                <Card sx={{ display: "flex" }}>
-                  <CardMedia
-                    component="img"
-                    sx={{ width: 400 }}
-                    image={blog2}
-                    alt=""
-                  />
-                  <Box sx={{ display: "flex", flexDirection: "column" }}>
-                    <CardContent sx={{ flex: "1 0 auto" }}>
-                      <Typography component="div" variant="h3" ml={20}>
-                        The Kidzapp Feed
-                      </Typography>
-                      <Typography component="div" variant="h6" ml={15}>
-                        Receive regular updates and promotions from Kidzapp
-                      </Typography>
-                      <Typography component="div" ml={15}>
-                        <TextField
-                          id="standard-basic"
-                          label="Enter your E-mail here"
-                          variant="standard"
-                        />
-                        <Button color="error" sx={{ mt: 2 }}>
-                          Subscribe
-                        </Button>
-                      </Typography>
-                      <Typography component="div" variant="h5" ml={15} mt={5} color="red">
-                        2500+
-                      </Typography>
-                      <Typography component="div" variant="h5" ml={15}>
-                        Experiences
-                      </Typography>
-                      <hr className="hr-1" />
 
-                      <Typography component="div" variant="h5" ml={36} mt={-6} color="red">
-                        500+
-                      </Typography>
-                      <Typography component="div" variant="h5" ml={36}>
-                        Venues & Events
-                      </Typography>
-                      <hr className="hr-2" />
+              <div className="container">
+              <div className="App">
+      <Slider
+        dots={false}
+        slidesToShow={4}
+        slidesToScroll={1}
+        autoplay={true}
+        autoplaySpeed={3000}
+      >
+        {renderSlides()}
+      </Slider>
+    </div>
 
-                      <Typography component="div" variant="h5" ml={63} mt={-6} color="red">
-                        1000+
-                      </Typography>
-                      <Typography component="div" variant="h5" ml={63}>
-                        Classes
-                      </Typography>
-                    </CardContent>
-                  </Box>
-                </Card>
-              </div>
-            </div>
+              </div><br/>
+
+<Kidzappfeed/>
+            
           </div>
         </section>
       </div>
