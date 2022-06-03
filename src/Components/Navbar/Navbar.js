@@ -83,7 +83,7 @@ function Navbar() {
                       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <div className='kidz-link2'>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav-row-link2">
-        <NavLink to ="/Find Activities">
+        <NavLink to ="/Findactivity">
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" to="#"> Find Activities</a>
         </li></NavLink> 
@@ -93,7 +93,7 @@ function Navbar() {
           <a className="nav-link active" to="#">Blog</a>
         </li></NavLink>
         
-        <NavLink to ="/kidzapp-awards">
+        <NavLink to ="/Kidzaward">
         <li className="nav-item">
           <a className="nav-link active " to="#" >kidzapp-awards</a>
         </li></NavLink>

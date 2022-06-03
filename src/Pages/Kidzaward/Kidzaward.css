@@ -1,0 +1,100 @@
+body{
+    margin-top: 100px;
+}
+.award-img{
+    width: -webkit-fill-available;
+    margin-top: 50px;
+}
+.section-award2{
+    margin-top: 50px;
+}
+.joureny-item::before{
+    
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 32%;
+    background-size: contain;
+    background-position: center;
+    background-image: url('https://kidzapp.com/images/before-back-image.png');
+    background-repeat: repeat;
+    height: 11px;
+    width: 100%;
+}
+li.journey-li::after {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    /* background-color: #00adee; */
+    z-index: 1;
+    top: calc(100% + 38px);
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+li.journey-li h4 {
+    text-align: center;
+    font-weight: 600;
+    border: 3px solid #47b57b;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 160px;
+    /* margin: 0 auto; */
+    padding: 15px 10px;
+    font-size: 20px;
+    color: #484848;
+}
+.journey-item{
+    display: flex;
+}
+.journey-li {
+  margin-right: 35px;
+}
+.section-award3{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.logo-img{
+    margin-left: 38%;
+}
+.section-award4{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: lightgray;
+}
+.winner-section{
+    border: 3px black;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 40px;
+}
+.winner-img{
+    width: 100px;
+    margin: 15px 15px 15px 15px;
+}
+.winner-section-h2{
+    margin-left: 10%;
+    display: contents;
+}
+.winner-img2{
+    width: 56px;
+    margin: 15px 15px 15px 30px;
+}
+.winner-section-img2 p{
+    color: grey;
+    font-weight: 600;
+    font-size: 21px;
+    display: initial;
+}
+.p2{
+    font-weight: 400;
+    font-size: initial;
+    color: gold;
+}
+.winner-img3{
+    width: 8%;
+    margin-left: 35%;
+    margin-top: -142px;
+}
