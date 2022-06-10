@@ -1,24 +1,7 @@
-import React from "react";
+import {React,useState,useEffect} from "react";
 import "./Home.css";
-
-import round1 from "../Assets/round1.jpg";
-import round2 from "../Assets/round2.jpg";
-import round3 from "../Assets/round3.jpg";
-import round4 from "../Assets/round4.png";
-import round5 from "../Assets/round5.jpg";
-import round6 from "../Assets/round6.png";
-import kidz1 from "../Assets/kidz1.jpeg";
-import kidz2 from "../Assets/kidz2.jpeg";
-import kidz3 from "../Assets/kidz3.jpg";
-import crousel1 from "../Assets/crousel1.jpg";
-import crousel2 from "../Assets/crousel2.jpg";
-import crousel3 from "../Assets/crousel3.jpg";
-import cartoon1 from "../Assets/cartoon1.jpg";
-import cartoon2 from "../Assets/cartoon2.jpg";
-import cartoon3 from "../Assets/cartoon3.jpg";
-import cartoon4 from "../Assets/cartoon4.png";
-import cartoon5 from "../Assets/cartoon5.png";
-import cartoon6 from "../Assets/cartoon6.jpg";
+import Axios from "axios"
+import { Carousel } from "react-bootstrap"
 import blog1 from "../Assets/blog1.jpg";
 import blog2 from "../Assets/blog2.jpg";
 import blog3 from "../Assets/blog3.jpg";
@@ -35,10 +18,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Kidzappfeed from '../Components/Kidzapp-feed/Kidzapp-feed'
-
+import SlickCard from "./Slick-slides/SlickCard";
+import Kidzapppolis from "./Kidzapppolis/Kidzapppolis";
 
 
 function Home() {
+  const [data,setData]=useState([])
   const renderSlides = () =>
     ['https://drfsb8fjssbd3.cloudfront.net/images/dubai-eye.png',
     'https://drfsb8fjssbd3.cloudfront.net/images/lovin-dubai.png',
@@ -55,101 +40,43 @@ function Home() {
         
       </div>
     ));
+    const getData=()=>{
+    Axios.get("https://api2.kidzapp.com/api/3.0/experiences/curated-list/?list_name=featured_banner_uae&country_code=&page=1&page_size=10&city=&website=1")
+    .then((res)=>{
+      setData(res.data.results)
+      console.log(res.data.results)
+    })
+  }
+  useEffect(()=>{
+    getData();
+  },[])
+
+  
+    
   return (
     <>
       <div className="container-flex">
-
-          {/* section-1 */}
-
-        <section className="crousel">
-          <div className="crousel-css">
-            <div
-              id="carouselExampleCaptions"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active cr-img">
-                  <img src={crousel1} class="d-block w-100 " alt="..." />
-                  <div class="carousel-caption d-none d-md-block">
-                    <h1>premier Padel kids Academy</h1>
-                    <p>
-                      Some representative placeholder content for the first
-                      slide.
-                    </p>
-                  </div>
-                </div>
-                <div class="carousel-item cr-img">
-                  <img src={crousel2} class="d-block w-100" alt="..." />
-                  <div class="carousel-caption d-none d-md-block">
-                    <h1>
-                      The pirates of Treasure Island Show at Theatre by QE2
-                    </h1>
-                    <p>
-                      Some representative placeholder content for the second
-                      slide.
-                    </p>
-                  </div>
-                </div>
-                <div class="carousel-item cr-img">
-                  <img src={crousel3} class="d-block w-100" alt="..." />
-                  <div class="carousel-caption d-none d-md-block">
-                    <h1>BOUNCE FRINDAY AFTERNOON </h1>
-                    <p>
-                      Some representative placeholder content for the third
-                      slide.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
+        <section className="section1">
+        
+        <Carousel>
+  {data.map((item)=>{
+    return(
+              <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={item.image_url}
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h1 className='crousel-h'>{item.title}</h1>
+      <p className='crousel-p'>{item.description}</p>
+    </Carousel.Caption>
+    
+   </Carousel.Item>
+   )
+  })};
+</Carousel>
+       
         </section>
 
             {/* section-2 */}
@@ -176,304 +103,24 @@ function Home() {
 
             {/* 1st card row */}
 
-            <div className="row">
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <Card className='card-hover-1' sx={{ maxWidth: 345 }}>
-                  <CardMedia
-                    component="img"
-                    height="200"
-                    image={kidz1}
-                    alt=" "
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      School
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      “Education is the most powerful weapon you can use to
-                      change the world” – Nelson Mandela
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" variant="contained" color="error">
-                      Book Now
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
 
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <Card className='card-hover-1' sx={{ maxWidth: 345 }}>
-                  <CardMedia
-                    component="img"
-                    height="200"
-                    image={kidz2}
-                    alt=""
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      School
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      “Education is the most powerful weapon you can use to
-                      change the world” – Nelson Mandela
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" variant="contained" color="error">
-                      Book Now
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
 
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <Card className='card-hover-1' sx={{ maxWidth: 345 }}>
-                  <CardMedia
-                    component="img"
-                    height="200"
-                    image={kidz3}
-                    alt=" "
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      School
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      “Education is the most powerful weapon you can use to
-                      change the world” – Nelson Mandela
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" variant="contained" color="error">
-                      Book Now
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
-            </div>
-            <br />
+
+{/* slick component */}
+<SlickCard />
+{/* components closed */}
+
+
+            
 
             {/* 2nd row of card */}
-            <div className="row">
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <Card className='card-hover-1' sx={{ maxWidth: 345 }}>
-                  <CardMedia
-                    component="img"
-                    height="200"
-                    image={kidz2}
-                    alt=""
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      School
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      “Education is the most powerful weapon you can use to
-                      change the world” – Nelson Mandela
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" variant="contained" color="error">
-                      Book Now
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
-
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <Card className='card-hover-1' sx={{ maxWidth: 345 }}>
-                  <CardMedia
-                    component="img"
-                    height="200"
-                    image={kidz2}
-                    alt=""
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      School
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      “Education is the most powerful weapon you can use to
-                      change the world” – Nelson Mandela
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" variant="contained" color="error">
-                      Book Now
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
-
-              <div className="col-lg-4 col-md-6 col-sm-12">
-                <Card className='card-hover-1' sx={{ maxWidth: 345 }}>
-                  <CardMedia
-                    component="img"
-                    height="200"
-                    image={kidz2}
-                    alt=""
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
-                      School
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      “Education is the most powerful weapon you can use to
-                      change the world” – Nelson Mandela
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" variant="contained" color="error">
-                      Book Now
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
-            </div>
+           
           </div>
         </section>
         <br />
 
-
-        {/* section-3 */}
         <section className="section-3">
-          <div className="container">
-            <center>
-              {" "}
-              <h1 style={{ color: "white" }}>Kidzappolis</h1>
-            </center>
-            <div className="row">
-              <div className="col-lg-2 ">
-                <div className="col-lg-2">
-                  <div class="card" style={{ width: "10rem" }}>
-                    <img src={round1} className="card-img-top " alt="..." />
-                    <div class="card-body">
-                      <p class="card-text">Animal Fun </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-2">
-                <div class="card" style={{ width: "10rem" }}>
-                  <img src={round2} class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <p class="card-text">Children </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-2">
-                <div class="card" style={{ width: "10rem" }}>
-                  <img src={round3} class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <p class="card-text">Art & music  </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-2">
-                <div class="card" style={{ width: "10rem" }}>
-                  <img src={round4} class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <p class="card-text">Baby & Toddler </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-2">
-                <div class="card" style={{ width: "10rem" }}>
-                  <img src={round5} class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <p class="card-text">Birthday </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-2">
-                <div class="card" style={{ width: "10rem" }}>
-                  <img src={round6} class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <p class="card-text">Courses </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br />
-
-           
-
-           
-            <center>
-              {" "}
-              <h1 style={{ color: "white" }}>Kidzapproved Collections</h1>
-            </center>
-
-            <div className="row">
-              <div className="col-lg-2 ">
-                <div className="col-lg-2">
-                  <div class="card" style={{ width: "10rem" }}>
-                    <img src={cartoon1} className="card-img-top " alt="..." />
-                    <div class="card-body">
-                      <p class="card-text">
-                         Cashback-Top Picks{" "}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-2">
-                <div class="card" style={{ width: "10rem" }}>
-                  <img src={cartoon2} class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <p class="card-text">Fun For AED 50 or Less </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-2">
-                <div class="card" style={{ width: "10rem" }}>
-                  <img src={cartoon3} class="card-img-top" alt="..." />
-                  
-                  <div class="card-body">
-                    <p class="card-text">Pay Attraction Deals </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-2">
-                <div class="card" style={{ width: "10rem" }}>
-                  <img src={cartoon4} class="card-img-top" alt="..." />
-                  <div class="card-body">
-                    <p class="card-text">Weekday deals Not to Miss </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-2">
-                <div class="card" style={{ width: "10rem" }}>
-                  <img src={cartoon5} class="card-img-top" alt="..." />
-                  <br />
-                  <div class="card-body">
-                    <p class="card-text">Super Club offers </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-lg-2">
-                <div class="card" style={{ width: "10rem" }}>
-                  <img src={cartoon6} class="card-img-top" alt="..." />
-                  <br />
-                  <div class="card-body">
-                    <p class="card-text">Birthday Deals </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br />
-          </div>
+          <Kidzapppolis/>
         </section>
 
         {/* Section-4 */}

@@ -5,10 +5,7 @@ body{
     /* height: 400px; */
     overflow: hidden;
 }
-/* .section-2.h1.first-line{
-    
-    text-align: center !important;
-} */
+
 .animate-charcter
 {
    text-transform: uppercase;
@@ -104,4 +101,14 @@ width: 105%;
     padding-left: 85px;
   }
 
+}
+.d-block{
+  height: 470px;
+}
+.crousel-p{
+  display: -webkit-box;
+    max-width: auto;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+   overflow: hidden;
 }

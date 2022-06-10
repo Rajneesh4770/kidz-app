@@ -2,8 +2,6 @@ import { React, useState, useEffect } from "react";
 import Axios from "axios";
 import "./Blog.css";
 import { useNavigate } from "react-router-dom";
-
-// import SearchIcon from '@mui/icons-material/Search';
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import BabyChangingStationIcon from "@mui/icons-material/BabyChangingStation";
 import StadiumIcon from "@mui/icons-material/Stadium";
@@ -25,7 +23,7 @@ function Blog() {
   const [data, setData] = useState([]);
   const getData = () => {
     Axios.get(
-      "https://api2.kidzapp.com/api/3.0/blogs?country_code=ae&limit=21&page=2"
+      "https://api2.kidzapp.com/api/3.0/blogs?country_code=ae&limit=9&page=2"
     )
       .then((res) => {
         console.log(res.data.results);
@@ -37,14 +35,14 @@ function Blog() {
   };
   useEffect(() => {
     getData();
-  });
+  },[]);
 
   return (
     <>
       <section className="section-1">
         <div className="container background-1">
           <div className="row">
-            <div className="col-lg-12 md-12 sm-12">
+            <div className="col-lg-12 md-12 sm-12 ">
               <div className="search-img">
                 <form class="d-flex search-bar">
                   <input
@@ -85,22 +83,22 @@ function Blog() {
 
           <div className="container">
             <div className="row">
-              <div className="col-3 button-div">
+              <div className="col-lg-3  col-md-6 col-sm-12 mb-2 button-div">
                 <button class="button-85" role="button">
                   Arts & Crafts &nbsp; <BubbleChartIcon />
                 </button>
               </div>
-              <div className="col-3 button-div">
+              <div className="col-lg-3  col-md-6 col-sm-12 mb-2 button-div">
                 <button class="button-85" role="button">
                   Kids Activities &nbsp; <StadiumIcon />
                 </button>
               </div>
-              <div className="col-3 button-div">
+              <div className="col-lg-3  col-md-6 col-sm-12 mb-2 button-div">
                 <button class="button-85" role="button">
                   Parenting &nbsp; <BabyChangingStationIcon />
                 </button>
               </div>
-              <div className="col-3 button-div">
+              <div className="col-lg-3  col-md-6 col-sm-12 mb-2 button-div">
                 <button class="button-85" role="button">
                   Health & Nutrition &nbsp; <HealthAndSafetyIcon />
                 </button>
@@ -126,7 +124,7 @@ function Blog() {
         {data?.map((item) => {
           return (
             <div className="row ">
-              <div className="col-lg-4 col-md-6 col-sm-12 m-2">
+            <div className=" m-2">
 
 <article class="blog-card">
               <div class="blog-card__background">
@@ -138,10 +136,6 @@ function Blog() {
                 </div>
               </div>
               <div class="blog-card__head">
-                {/* <span class="date__box">
-                  <span class="date__day">11</span>
-                
-                </span> */}
               </div>
               <div class="blog-card__info">
                 <h5> {item.meta_title}</h5><br/>
@@ -154,14 +148,12 @@ function Blog() {
               </div>
             </article>
 
-
-
-                    {/* old */}
-              </div>
-            </div>
-          );
-        })}
-      </div>
+                    
+                  </div>
+        </div>
+                    );
+                  })}
+                  </div>
 
       <section className="last-section">
         <div className="container">

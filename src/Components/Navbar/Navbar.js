@@ -35,34 +35,44 @@ function Navbar() {
         <div className='kidz-link1'>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 nav-row-link">
         <li className="nav-item">
-          {/* <button>Search By</button> */}
-          {/* <div class="dropdown">
-  <button class="btn download-btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </button>
+          
+{/* <Button variant="outlined" endIcon={<ArrowDropDownIcon />} className='mui-btn'>
+  Search By
+</Button> */}
+<div class="input-group   ">
+            <input type="search" placeholder=" searching for?"  class="form-control bg-none border-0"/>
+            <div class="input-group-append border-0">
+              <Button variant="outlined" id="button-addon3" type="button" class="btn btn-link text-success"><i class="fa fa-search"></i></Button>
+            </div>
+          </div>
+          </li> 
+        
+        
+        
+        <li className="nav-item">
+        <div className="dropdown ">
+  <Button variant="outlined" className="button-1  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Search By
+  </Button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <li><a class="dropdown-item" href="#">Action</a></li>
     <li><a class="dropdown-item" href="#">Another action</a></li>
     <li><a class="dropdown-item" href="#">Something else here</a></li>
   </ul>
-</div> */}
-<Button variant="outlined" endIcon={<ArrowDropDownIcon />} className='mui-btn'>
-  Search By
-</Button>
-          </li> 
-        
-        <li className="nav-item">
-        <Button variant="outlined"  endIcon={<SearchIcon/>} className='mui-btn'>Search</Button>
-
-       
-        </li>
-        
-        <li className="nav-item">
-        <Button variant="outlined" endIcon={<DownloadIcon/>} className='mui-btn'>Search</Button>
+</div>
         </li>
 
         <li className="nav-item">
-        <Button variant="outlined" endIcon={<TranslateIcon/>} className='mui-btn'>Translate</Button>
+        <div class="dropdown">
+        <Button variant="outlined"
+        className="button-1  " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
+        endIcon={<TranslateIcon/>} >Translate</Button>
+         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="#"><img src='https://drfsb8fjssbd3.cloudfront.net/images/egy.svg' alt="Flag Image" class="lazy"/>English</a></li>
+    <li><a class="dropdown-item" href="#"><img src="https://drfsb8fjssbd3.cloudfront.net/images/Flag-UAE.svg" alt="Flag Image" class="lazy"></img> UAE </a></li>
+    
+  </ul>
+  </div>
         </li>
 
         <NavLink to ="/Login">
