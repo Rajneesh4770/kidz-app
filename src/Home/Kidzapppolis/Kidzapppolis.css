@@ -58,13 +58,15 @@
 }
 .aproved-img {
     border-radius: 50px;
-    height: 60px !important
-    ;
+    height: 60px !important ;
     width: 70px;
     margin: 0px 20px;
 }
 .aproved-p{
-    height: 14%;
+    width: 100px;
  overflow: hidden;
  text-overflow: ellipsis;
+}
+.conditional-card{
+    margin:  0px auto 15px auto ;
 }
