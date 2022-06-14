@@ -1,0 +1,13 @@
+.blog-card-home{
+    margin-bottom: 15px;
+}
+.card-4{
+    border-radius: 18px !important;
+}
+.title-blog{
+    display: -webkit-box;
+    max-width: auto;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+   overflow: hidden;
+}

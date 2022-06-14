@@ -33,9 +33,6 @@ function Kidzapppolis() {
       .get("https://api2.kidzapp.com/api/3.0/lists?country_code=ae")
       .then((res) => {
         let kidzaprovedCollections = [];
-
-        // let blogNames = []
-        // let review_dates = []
         let response_Name = [];
         if (res.data.length > 0) {
           for (let val of res.data) {
@@ -97,7 +94,7 @@ function Kidzapppolis() {
         <br />
         <Slider {...settings2}>
           {data2.map((item1) => (
-            <div>
+            <div className="container collection-card">
               <Card className=" conditional-card" style={{ width: "7rem" }}>
                 <Card.Img
                   variant="top"

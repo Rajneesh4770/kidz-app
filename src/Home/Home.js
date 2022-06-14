@@ -2,15 +2,11 @@ import {React,useState,useEffect} from "react";
 import "./Home.css";
 import Axios from "axios"
 import { Carousel } from "react-bootstrap"
-import blog1 from "../Assets/blog1.jpg";
-import blog2 from "../Assets/blog2.jpg";
-import blog3 from "../Assets/blog3.jpg";
-import blog4 from "../Assets/blog4.jpeg";
-import blog5 from "../Assets/blog5.jpg";
+
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
+
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { CardActionArea, Rating } from "@mui/material";
@@ -20,7 +16,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Kidzappfeed from '../Components/Kidzapp-feed/Kidzapp-feed'
 import SlickCard from "./Slick-slides/SlickCard";
 import Kidzapppolis from "./Kidzapppolis/Kidzapppolis";
-
+import HomeBlog from "./HomeBlog/HomeBlog";
 
 function Home() {
   const [data,setData]=useState([])
@@ -63,7 +59,7 @@ function Home() {
     return(
               <Carousel.Item>
     <img
-      className="d-block w-100"
+      className="d-block w-100 crousel-imgs"
       src={item.image_url}
       alt="First slide"
     />
@@ -126,294 +122,7 @@ function Home() {
         {/* Section-4 */}
 
         <section className="section-4">
-          <center>
-            
-            <h1 style={{ color: "white" }}>Our Blog Pics</h1>
-          <br />
-          </center>
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-8 col-md-12 col-sm-12">
-                <Card className="card-4" sx={{ maxWidth: 650 }}>
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="350"
-                      image={blog1}
-                      alt=""
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        Kidz app Team
-                      </Typography>
-                      <br />
-                      <Typography variant="body2" color="text.secondary">
-                        Fun Things To Do With Your Older Kids In Dubai And Abu
-                        Dhabi
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
-              <div className="col-lg-4 col-sm-12 col-md-12">
-                <Card className="card-4" sx={{ maxWidth: 345 }}>
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="350"
-                      image={blog2}
-                      alt=""
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        Kidz app Team
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        Kids birthdays In Dubai And Aby Dhabi: 10+ Awesome Ways
-                        To Celebrate
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
-            </div>
-            <br />
-
-            <div className="row">
-              <div className="col-lg-4 col-md-12 col-sm-12">
-                <Card className="card-4" sx={{ maxWidth: 345 }}>
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="300"
-                      image={blog3}
-                      alt="green iguana"
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        kidz App Team
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        10+ Big Family Attractions You Need To Visit This Eid
-                        Holiday
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
-
-              <div className="col-lg-4 col-md-12 col-sm-12">
-                <Card className="card-4" sx={{ maxWidth: 345 }}>
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="300"
-                      image={blog4}
-                      alt="green iguana"
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        Kidz App Team
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        15 Indoor Activities In Dubai And Abu Dhabi You Might
-                        Not Have Tried Yet
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
-
-              <div className="col-lg-4 md-12 sm-12">
-                <Card className="card-4" sx={{ maxWidth: 345 }}>
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="300"
-                      image={blog5}
-                      alt="green iguana"
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        Kidz App Team
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        10 Ramadan Deals In Dubai And Abu Dhabi You Don’t Want
-                        To Miss
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
-            </div>
-            <br />
-
-            <div className="row">
-              <div className="col-lg-4">
-                <Card className="card-4" sx={{ maxWidth: 345 }}>
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="350"
-                      image={blog2}
-                      alt=""
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        Kidz app Team
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        Kids birthdays In Dubai And Aby Dhabi: 10+ Awesome Ways
-                        To Celebrate
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
-              <div className="col-lg-8 special ">
-                <Card className="card-4" sx={{ maxWidth: 650 }}>
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="350"
-                      image={blog1}
-                      alt=""
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        Kidz app Team
-                      </Typography>
-                      <br />
-                      <Typography variant="body2" color="text.secondary">
-                        Fun Things To Do With Your Older Kids In Dubai And Abu
-                        Dhabi
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
-            </div>
-            <br />
-
-            <div className="row">
-              <div className="col-lg-4 col-md-12 col-sm-12">
-                <Card className="card-4" sx={{ maxWidth: 345 }}>
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="300"
-                      image={blog3}
-                      alt="green iguana"
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        kidz App Team
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        10+ Big Family Attractions You Need To Visit This Eid
-                        Holiday
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
-
-              <div className="col-lg-4 col-md-12 col-sm-12">
-                <Card className="card-4" sx={{ maxWidth: 345 }}>
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="300"
-                      image={blog4}
-                      alt="green iguana"
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        Kidz App Team
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        15 Indoor Activities In Dubai And Abu Dhabi You Might
-                        Not Have Tried Yet
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
-
-              <div className="col-lg-4 md-12 sm-12">
-                <Card className="card-4" sx={{ maxWidth: 345 }}>
-                  <CardActionArea>
-                    <CardMedia
-                      component="img"
-                      height="300"
-                      image={blog5}
-                      alt="green iguana"
-                    />
-                    <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
-                        Kidz App Team
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        10 Ramadan Deals In Dubai And Abu Dhabi You Don’t Want
-                        To Miss
-                      </Typography>
-                    </CardContent>
-                  </CardActionArea>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Share
-                    </Button>
-                  </CardActions>
-                </Card>
-              </div>
-            </div>
-            <br />
-          </div>
+         <HomeBlog/>
         </section>
 
         {/* Section-5 */}

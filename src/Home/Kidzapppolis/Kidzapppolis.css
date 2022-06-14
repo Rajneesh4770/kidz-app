@@ -70,3 +70,10 @@
 .conditional-card{
     margin:  0px auto 15px auto ;
 }
+.collection-card{
+    margin: 0px 30px 0px 30px;
+}
+.conditional-card{
+    margin-left: 22%;
+    margin-right: 26%;
+}

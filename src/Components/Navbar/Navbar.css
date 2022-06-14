@@ -33,7 +33,7 @@
     position: absolute;
     margin-left: inherit;
     padding-top: 20px;
-    margin-top: -2%;
+    margin-top: -1.5%;
     
   }
   .nav-row-link2 a{
@@ -95,7 +95,7 @@
             /*  position: absolute;  */
             margin-left: 20%;
             padding-top: 20px;
-            margin-top: -2%; 
+            margin-top: -1.5% ; 
           }
 
       }
